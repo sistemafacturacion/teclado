@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39AEFA6F-C928-41ED-8F5D-857868E28A9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaClinico.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaClinico</RootNamespace>
+    <AssemblyName>SistemaClinico</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SistemaClinico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SistemaClinico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3D558262F6AE36AC610A1199F63049C83C31AABD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SistemaClinico_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Conexion.vb" />
+    <Compile Include="Datos\FBuscarPaciente.vb" />
+    <Compile Include="Datos\FGuardar_Paciente.vb" />
+    <Compile Include="Datos\SEGUROS\Guardar_Seguros.vb" />
+    <Compile Include="Datos\SERVICIOS\FSERVICIOS.vb" />
+    <Compile Include="Logica\EAD_Cliente_Paciente.vb" />
+    <Compile Include="Logica\SEGUROS\ESEGUROS.vb" />
+    <Compile Include="Logica\SERVICIOS\ESERVICIOS.vb" />
+    <Compile Include="Presentacion\Buscar Registro de Paciente.Designer.vb">
+      <DependentUpon>Buscar Registro de Paciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Buscar Registro de Paciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\COTIZACION\Cotizacion.Designer.vb">
+      <DependentUpon>Cotizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\COTIZACION\Cotizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FACTURACION\Facturacion.Designer.vb">
+      <DependentUpon>Facturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FACTURACION\Facturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica\EHistorial_Paciente_Dos.vb" />
+    <Compile Include="Logica\EHistorial_Paciente_tres.vb" />
+    <Compile Include="Logica\EHistorial_Uno.vb" />
+    <Compile Include="Logica\EPaciente.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presentacion\PAGOS\PAGOS.Designer.vb">
+      <DependentUpon>PAGOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PAGOS\PAGOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\SEGUROS\Frm Buscar Seguros.Designer.vb">
+      <DependentUpon>Frm Buscar Seguros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\SEGUROS\Frm Buscar Seguros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\SEGUROS\Registro de Seguros.Designer.vb">
+      <DependentUpon>Registro de Seguros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\SEGUROS\Registro de Seguros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Servicios\Frm Buscar Servicios.Designer.vb">
+      <DependentUpon>Frm Buscar Servicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Servicios\Frm Buscar Servicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Servicios\Servicios.Designer.vb">
+      <DependentUpon>Servicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Servicios\Servicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Sistema de Clinica.Designer.vb">
+      <DependentUpon>Sistema de Clinica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Sistema de Clinica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presentacion\Buscar Registro de Paciente.resx">
+      <DependentUpon>Buscar Registro de Paciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\COTIZACION\Cotizacion.resx">
+      <DependentUpon>Cotizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FACTURACION\Facturacion.resx">
+      <DependentUpon>Facturacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PAGOS\PAGOS.resx">
+      <DependentUpon>PAGOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\SEGUROS\Frm Buscar Seguros.resx">
+      <DependentUpon>Frm Buscar Seguros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\SEGUROS\Registro de Seguros.resx">
+      <DependentUpon>Registro de Seguros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Servicios\Frm Buscar Servicios.resx">
+      <DependentUpon>Frm Buscar Servicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Servicios\Servicios.resx">
+      <DependentUpon>Servicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Sistema de Clinica.resx">
+      <DependentUpon>Sistema de Clinica.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="SistemaClinico_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reporte\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
